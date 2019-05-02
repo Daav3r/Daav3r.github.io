@@ -1,0 +1,170 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Hotel</title>
+  <link rel="stylesheet" href="mall.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Sniglet');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+
+}
+body{
+  background: url('test.jpg');
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  font-family: monospace;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media only screen and (max-width: 767px) {
+
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.contact-form{
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0,0,0,13);
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+.input-fields,
+.msg{
+  width: 48%;
+}
+
+.input-fields .input,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+}
+.msg textarea{
+  height: 212px;
+}
+
+::-webkit-input-placeholder{
+color: #c5ecfd;
+}
+
+::-moz-input-placeholder{
+  color: #c5ecfd;
+}
+::-ms-webkit-input-placeholder{
+  color: #c5ecfd;
+}
+
+.btn{
+  background: #39b7dd;
+  text-align: center;
+  padding: 15px;
+border-radius: 5px;
+color: #fff;
+ cursor: pointer;
+ text-transform:  uppercase;
+}
+
+@media screen and (max-width:600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  input-fields,
+  .msg{
+     width: 100%;
+  }
+
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+
+
+    <div class="row">
+      <div class="logo">
+        <img src="logo.png" alt="">
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="Index.html" >Hotel</a>
+        <a href="room.html">Boka</a>
+        <a href="sida3.html">Hitta</a>
+        <a href="sida4.html" class="active">Kontakt</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </header>
+<section>
+    <div class="wrapper">
+  <div class="contact-form">
+    <div class="input-fields">
+      <input type="text" class="input" placeholder="Namn" />
+      <input type="text" class="input" placeholder="Efternamn" />
+      <input type="text" class="input" placeholder="Email" />
+      <input type="text" class="input" placeholder="Mobilnummer" />
+    </div>
+    <div class="msg">
+      <textarea placeholder="Meddelande"></textarea>
+      <div class="btn">Skicka</div>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+    <h1>
+    Grand Hotell
+    </h1>
+    <span class="Telefon">Phone: +0700000000</span>
+    <span class="Email">Email: GH@gmail.com</span>
+    <br>
+    <a class="Adress">Adress: GrandHotelgatan69</a>
+
+
+
+</footer>
+</section>
+<script src="script-nav.js"></script>
+</body>

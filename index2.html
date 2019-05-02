@@ -1,0 +1,205 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Hotel</title>
+  <link rel="stylesheet" href="mall.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+   background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(idkbild.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+@media only screen and (max-width: 600px) {}
+
+    h2{
+    text-align: right;
+    width: 10%;
+  }
+
+footer{
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+
+    <div class="row">
+      <div class="logo">
+        <img src="logo.png" alt="">
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="Index.html">Hotel</a>
+        <a href="room.html">Boka</a>
+        <a href="sida3.html">Hitta</a>
+        <a href="sida4.html">Kontakt</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </header>
+
+    <form action="room.html">
+      <!--  General -->
+    <section>
+            <div class="form-group">
+        <h2 class="heading">RoomBookning</h2>
+        <div class="controls">
+          <input type="text" id="name" class="floatLabel" name="name">
+          <label for="name">Namn</label>
+        </div>
+        <div class="controls">
+          <input type="text" id="second" class="floatLabel" name="country">
+          <label>Efternamn</label>
+        </div>
+        <div class="controls">
+          <input type="text" id="email" class="floatLabel" name="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="controls">
+          <input type="tel" id="phone" class="floatLabel" name="phone">
+          <label>Mobilnummer</label>
+        </div>
+        <div class="grid">
+          <div class="col-2-3">
+
+          </div>
+        </div>
+      </div>
+
+
+      <!--  Details -->
+      <div class="form-group">
+        <h2 class="heading">Detailer</h2>
+        <div class="grid">
+          <div class="col-1-4 col-1-4-sm">
+            <div class="controls">
+              <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+              <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Ankomst</label>
+            </div>
+          </div>
+          <div class="col-1-4 col-1-4-sm">
+            <div class="controls">
+              <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+              <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Avgång</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-3 col-1-3-sm">
+          <div class="controls">
+            <i class="fa fa-sort"></i>
+            <select class="floatLabel">
+              <option value="blank" selected>Välj</option>
+              <option value="deluxe">1</option>
+              <option value="deluxe2">2</option>
+              <option value="deluxe3">3</option>
+              <option value="deluxe4">4</option>
+              <option value="deluxe5">5</option>
+              <option value="deluxe6">6</option>
+            </select>
+            <label>Personer</label>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="col-1-3 col-1-3-sm">
+            <div class="controls">
+              <i class="fa fa-sort"></i>
+              <select class="floatLabel">
+                <option value="blank" selected>Välj</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <label><i class="fa fa-male"></i>&nbsp;&nbsp;Barn</label>
+            </div>
+          </div>
+          <div class="col-1-3 col-1-3-sm">
+            <div class="controls">
+              <i class="fa fa-sort"></i>
+              <select class="floatLabel">
+                <option value="blank" selected>Välj</option>
+                <option value="deluxe">1</option>
+                <option value="deluxe2">2</option>
+                <option value="deluxe3">3</option>
+                <option value="deluxe4">4</option>
+
+              </select>
+              <label>Vuxna</label>
+            </div>
+          </div>
+
+          <div class="col-1-3 col-1-3-sm">
+            <div class="controls">
+              <i class="fa fa-sort"></i>
+              <select class="floatLabel">
+                <option value="blank" selected>Välj</option>
+                <option value="single-bed">Room 1</option>
+                <option value="double-bed">Room 2</option>
+                <option value="flersäng">Room 3</option>
+                <option value="flersängar">Room 4</option>
+                <option value="flersängar">Room 5</option>
+
+              </select>
+              <label>Rum nummer</label>
+            </div>
+          </div>
+
+        </div>
+        <div class="grid">
+          <p class="info-text">Annan viktig information!</p>
+          <br>
+          <div class="controls">
+            <textarea name="comments" class="floatLabel" id="comments"></textarea>
+            <label for="comments">Tack</label>
+          </div>
+          <input type="submit" value="Submit" class="col-1-4">Submit</input>
+        </div>
+      </div> <!-- /.form-group -->
+    </section>
+  </form>
+
+  <footer>
+      <h1>
+      Grand Hotell
+      </h1>
+      <span class="Telefon">Phone: +0700000000</span>
+      <span class="Email">Email: GH@gmail.com</span>
+      <br>
+      <a class="Adress">Adress: GrandHotelgatan69</a>
+
+
+
+  </footer>
+
+<script src="script-nav.js"></script>
+</body>
+
+</html>
